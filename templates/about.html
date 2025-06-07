@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Entrepreneurial Ideas</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">BizWiz</div>
+      <ul>
+        <li>
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            style="
+              text-decoration: none;
+              color: var(--primary);
+              font-weight: 700;
+            "
+            >About</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class="site-title">About This Project</h1>
+      <div class="intro">
+        <p>
+          <strong>Entrepreneurial Ideas</strong> is a curated collection of
+          innovative, practical, and inspiring business ideas for aspiring
+          founders, side-hustlers, and creative thinkers.
+        </p>
+        <p>
+          Our mission is to spark your imagination and help you discover new
+          opportunities—whether you’re looking for your first venture, a fresh
+          side project, or simply want to explore what’s possible.
+        </p>
+        <p>
+          Each idea is presented with clear details on startup costs, setup
+          time, potential earnings, and more, so you can quickly find what fits
+          your goals and resources.
+        </p>
+        <p>
+          We believe that
+          <span style="color: var(--primary); font-weight: 600"
+            >innovation</span
+          >
+          and
+          <span style="color: var(--accent); font-weight: 600">action</span> are
+          for everyone. Get inspired, take the next step, and turn your ideas
+          into reality!
+        </p>
+      </div>
+    </div>
+    <!-- Cookie Consent Banner -->
+    <div
+      id="cookie-banner"
+      style="
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -2px 12px rgba(20, 184, 166, 0.07);
+        z-index: 9999;
+        padding: 1.2rem 0;
+        text-align: center;
+        font-size: 1rem;
+      ">
+      This website uses cookies for analytics and advertising. By using this
+      site, you agree to our
+      <a
+        href="terms.html"
+        style="
+          color: var(--primary);
+          text-decoration: underline;
+          font-weight: 600;
+        "
+        >Terms of Use</a
+      >.
+      <button
+        id="cookie-accept"
+        style="
+          margin-left: 1.5rem;
+          background: var(--primary);
+          color: #fff;
+          border: none;
+          border-radius: 6px;
+          padding: 0.5rem 1.2rem;
+          font-weight: 600;
+          cursor: pointer;
+        ">
+        Accept
+      </button>
+    </div>
+    <script>
+      // Show banner if not previously accepted
+      if (!localStorage.getItem("cookieConsent")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+      document.getElementById("cookie-accept").onclick = function () {
+        localStorage.setItem("cookieConsent", "true");
+        document.getElementById("cookie-banner").style.display = "none";
+      };
+    </script>
+    <footer
+      style="
+        text-align: center;
+        padding: 2rem 0 1rem 0;
+        color: var(--text-muted);
+        font-size: 1rem;
+      ">
+      &copy; 2025 BizWiz &mdash;
+      <a
+        href="terms.html"
+        style="
+          color: var(--primary);
+          text-decoration: underline;
+          font-weight: 600;
+        "
+        >Terms of Use</a
+      >
+    </footer>
+  </body>
+</html>

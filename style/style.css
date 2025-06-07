@@ -1,0 +1,304 @@
+/* --- Global Reset & Base Styles --- */
+:root {
+  --primary: #14b8a6; /* Teal */
+  --primary-light: #ccfbf1; /* Light teal */
+  --accent: #38bdf8; /* Sky blue */
+  --accent-light: #e0f2fe; /* Light blue */
+  --bg: linear-gradient(120deg, #f0fdfa 0%, #e0f2fe 100%);
+  --card-bg: #fff;
+  --card-gradient: linear-gradient(120deg, #f0fdfa 0%, #e0f2fe 100%);
+  --text-main: #134e4a;
+  --text-muted: #64748b;
+  --border: #e5e7eb;
+  --radius: 20px;
+  --shadow: 0 4px 32px rgba(20, 184, 166, 0.09);
+  --transition: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* --- Navigation --- */
+nav {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 16px rgba(124, 58, 237, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--primary-light);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition), border-bottom var(--transition);
+  font-size: 1.08rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  letter-spacing: 0.2px;
+}
+nav li:hover {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* --- Container & Headings --- */
+.container {
+  max-width: 1100px;
+  margin: 2.8rem auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.7rem 2.2rem 3.2rem 2.2rem;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.7rem;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.intro-wrapper h2 {
+  font-size: 1.35rem;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.intro {
+  color: var(--text-muted);
+  font-size: 1.13rem;
+  margin-bottom: 1.7rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.separator {
+  border-bottom: 2px solid var(--primary-light);
+  margin: 2.2rem 0 1.7rem 0;
+}
+
+/* --- Filters --- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.2rem;
+  justify-content: center;
+}
+
+.filter-button {
+  background: var(--accent-light);
+  color: var(--primary);
+  border: none;
+  border-radius: 22px;
+  padding: 0.55rem 1.4rem;
+  font-size: 1.03rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    box-shadow var(--transition);
+  outline: none;
+  box-shadow: 0 1px 4px rgba(56, 189, 248, 0.09);
+}
+.filter-button.active,
+.filter-button:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.13);
+}
+
+/* --- Card Grid --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
+}
+
+/* --- Card Styles --- */
+.card {
+  background: var(--card-gradient);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(56, 189, 248, 0.1);
+  padding: 2.1rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition),
+    background var(--transition);
+  min-height: 320px;
+  outline: 2px solid transparent;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 10px 36px rgba(124, 58, 237, 0.16);
+  background: linear-gradient(120deg, #e0e7ff 0%, #f0fdfa 100%);
+  outline: 2px solid var(--accent);
+}
+
+.card::before {
+  content: "✨";
+  font-size: 2.3rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  opacity: 0.13;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.card:hover::before {
+  opacity: 0.22;
+}
+
+/* --- Card Tags --- */
+.tags {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.22rem 0.85rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 4px rgba(56, 189, 248, 0.09);
+  transition: background var(--transition), color var(--transition);
+}
+.card:hover .tag {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* --- Card Title & Description --- */
+.title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.38rem;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.desc {
+  color: var(--text-muted);
+  font-size: 1.09rem;
+  margin-bottom: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* --- Info List --- */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.04rem;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.info-list li {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 0.28rem 0.7rem;
+  font-size: 1.01rem;
+  color: var(--text-main);
+  font-weight: 500;
+  margin-bottom: 0.13rem;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 1px 4px rgba(56, 189, 248, 0.04);
+}
+
+.info-list li strong {
+  color: var(--primary);
+  font-weight: 700;
+  min-width: 140px;
+  display: inline-block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .container {
+    padding: 1.2rem 0.7rem 2rem 0.7rem;
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  .grid {
+    gap: 1.2rem;
+  }
+  nav {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1rem 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0.7rem 0.1rem 1.2rem 0.1rem;
+  }
+  .site-title {
+    font-size: 1.1rem;
+  }
+  .grid {
+    gap: 0.7rem;
+  }
+  .card {
+    padding: 1.1rem 0.7rem 1rem 0.7rem;
+    min-height: 220px;
+  }
+  .tags {
+    margin-bottom: 0.5rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+}
