@@ -263,6 +263,55 @@ nav li:hover {
   display: inline-block;
 }
 
+/* --- Modal styles for card expansion --- */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.18);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.modal.show {
+  display: flex !important;
+}
+.modal-content {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 500px;
+  width: 90vw;
+  position: relative;
+  animation: modalIn 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes modalIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 800;
+  background: none;
+  border: none;
+}
+
 /* --- Responsive --- */
 @media (max-width: 900px) {
   .container {
