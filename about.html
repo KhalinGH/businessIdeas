@@ -3,73 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Entrepreneurial Ideas</title>
+    <title>About BizWiz | Innovative Business Ideas & Inspiration</title>
+    <meta
+      name="description"
+      content="Learn about BizWiz, our mission to inspire entrepreneurs, and how we curate practical business ideas for founders, side-hustlers, and creative thinkers." />
+    <meta
+      name="keywords"
+      content="about BizWiz, business ideas, entrepreneurship, startup inspiration, side hustle, innovation" />
+    <meta
+      property="og:title"
+      content="About BizWiz | Innovative Business Ideas & Inspiration" />
+    <meta
+      property="og:description"
+      content="Discover BizWiz's mission and how we help entrepreneurs and creative thinkers find their next business idea." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/about.html" />
+    <meta property="og:site_name" content="BizWiz" />
+    <meta property="og:image" content="images/logo.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="About BizWiz | Innovative Business Ideas & Inspiration" />
+    <meta
+      name="twitter:description"
+      content="Discover BizWiz's mission and how we help entrepreneurs and creative thinkers find their next business idea." />
+    <meta name="twitter:image" content="images/logo.svg" />
+    <link rel="canonical" href="https://yourdomain.com/about.html" />
     <link rel="icon" type="image/x-icon" href="images/logo.svg" />
-
     <link rel="stylesheet" href="style/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet" />
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BizWiz",
+        "url": "https://yourdomain.com/",
+        "logo": "https://yourdomain.com/images/logo.svg"
+      }
+    </script>
   </head>
   <body>
-    <nav>
-      <div class="logo">BizWiz</div>
-      <ul>
-        <li>
-          <a href="index.html" style="text-decoration: none; color: inherit"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="successStories.html"
-            style="text-decoration: none; color: inherit"
-            >Success Stories</a
-          >
-        </li>
-        <li>
-          <a
-            href="about.html"
+    <header>
+      <nav aria-label="Main navigation">
+        <div class="logo">
+          <img
+            src="images/logo.svg"
+            alt="BizWiz logo"
             style="
-              text-decoration: none;
-              color: var(--primary);
-              font-weight: 700;
-            "
-            >About</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <div class="container">
-      <h1 class="site-title">About This Project</h1>
-      <div class="intro">
-        <p>
-          <strong>Entrepreneurial Ideas</strong> is a curated collection of
-          innovative, practical, and inspiring business ideas for aspiring
-          founders, side-hustlers, and creative thinkers.
-        </p>
-        <p>
-          Our mission is to spark your imagination and help you discover new
-          opportunities—whether you’re looking for your first venture, a fresh
-          side project, or simply want to explore what’s possible.
-        </p>
-        <p>
-          Each idea is presented with clear details on startup costs, setup
-          time, potential earnings, and more, so you can quickly find what fits
-          your goals and resources.
-        </p>
-        <p>
-          We believe that
-          <span style="color: var(--primary); font-weight: 600"
-            >innovation</span
-          >
-          and
-          <span style="color: var(--accent); font-weight: 600">action</span> are
-          for everyone. Get inspired, take the next step, and turn your ideas
-          into reality!
-        </p>
+              height: 1.7rem;
+              vertical-align: middle;
+              margin-right: 0.5rem;
+            " />
+          BizWiz
+        </div>
+        <ul>
+          <li>
+            <a href="index.html" style="text-decoration: none; color: inherit"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="successStories.html"
+              style="text-decoration: none; color: inherit"
+              >Success Stories</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              style="
+                text-decoration: none;
+                color: var(--primary);
+                font-weight: 700;
+              "
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="site-title">About BizWiz</h1>
+        <section class="intro">
+          <p>
+            <strong>BizWiz</strong> is a curated collection of innovative,
+            practical, and inspiring business ideas for aspiring founders,
+            side-hustlers, and creative thinkers.
+          </p>
+          <p>
+            Our mission is to spark your imagination and help you discover new
+            opportunities—whether you’re looking for your first venture, a fresh
+            side project, or simply want to explore what’s possible.
+          </p>
+          <p>
+            Each idea is presented with clear details on startup costs, setup
+            time, potential earnings, and more, so you can quickly find what
+            fits your goals and resources.
+          </p>
+          <p>
+            We believe that
+            <span style="color: var(--primary); font-weight: 600"
+              >innovation</span
+            >
+            and
+            <span style="color: var(--accent); font-weight: 600">action</span>
+            are for everyone. Get inspired, take the next step, and turn your
+            ideas into reality!
+          </p>
+        </section>
       </div>
-    </div>
+    </main>
     <!-- Cookie Consent Banner -->
     <div
       id="cookie-banner"
@@ -97,7 +145,8 @@
           font-weight: 600;
         "
         >Terms of Use</a
-      >.
+      >
+      .
       <button
         id="cookie-accept"
         style="

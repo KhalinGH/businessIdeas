@@ -6,7 +6,6 @@
     <title>
       Turn Passion Into Profit: Top 31 Business Ideas for 2025 | BizWiz
     </title>
-    <link rel="icon" type="image/x-icon" href="images/logo.svg" />
     <meta
       name="description"
       content="Discover 30+ innovative, low-barrier business ideas for 2025. Find startup costs, setup time, and market demand to inspire your next venture or side hustle." />
@@ -22,17 +21,47 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourdomain.com/" />
     <meta property="og:site_name" content="BizWiz" />
+    <meta property="og:image" content="images/logo.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Turn Passion Into Profit: Top 31 Business Ideas for 2025 | BizWiz" />
+    <meta
+      name="twitter:description"
+      content="Get inspired with 100+ actionable business ideas for 2025. Filter by cost, skill, and more. Start your entrepreneurial journey today!" />
+    <meta name="twitter:image" content="images/logo.svg" />
     <link rel="canonical" href="https://yourdomain.com/" />
+    <link rel="icon" type="image/x-icon" href="images/logo.svg" />
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="icon" href="/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet" />
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BizWiz",
+        "url": "https://yourdomain.com/",
+        "logo": "https://yourdomain.com/images/logo.svg",
+        "sameAs": []
+      }
+    </script>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">BizWiz</div>
+      <nav aria-label="Main navigation">
+        <div class="logo">
+          <img
+            src="images/logo.svg"
+            alt="BizWiz logo"
+            style="
+              height: 1.7rem;
+              vertical-align: middle;
+              margin-right: 0.5rem;
+            " />
+          BizWiz
+        </div>
         <ul>
           <li>
             <a
@@ -52,7 +81,6 @@
               >Success Stories</a
             >
           </li>
-
           <li>
             <a href="about.html" style="text-decoration: none; color: inherit"
               >About</a
@@ -66,7 +94,7 @@
         <h1 class="site-title">
           Turn Passion Into Profit: Top 31 Business Ideas for 2025
         </h1>
-        <div class="intro-wrapper">
+        <section class="intro-wrapper">
           <h2>Want To Earn Some Serious Side Cash in 2025?</h2>
           <p class="intro">
             Great businesses often start with a simple idea—something useful,
@@ -76,10 +104,8 @@
             this list includes exciting, low-barrier business ideas designed for
             today's world.
           </p>
-        </div>
-
+        </section>
         <div class="separator"></div>
-
         <!-- Filter Buttons -->
         <section aria-label="Filter business ideas">
           <div class="filters">
@@ -110,7 +136,6 @@
             </button>
           </div>
         </section>
-
         <!-- Cards -->
         <section class="grid" aria-label="Business ideas list">
           <div class="card" data-tags="Low Cost, Beginner Friendly, Creative">
@@ -774,7 +799,6 @@
         >Terms of Use</a
       >
     </footer>
-
     <!-- Cookie Consent Banner -->
     <div
       id="cookie-banner"
@@ -891,6 +915,6 @@
         <div id="modal-details"></div>
       </div>
     </div>
-    <script src=script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
