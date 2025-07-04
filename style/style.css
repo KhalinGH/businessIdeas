@@ -49,6 +49,12 @@ nav {
   align-items: center;
   gap: 0.5rem;
 }
+.logo img {
+  height: 4.5rem;
+  width: auto;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
 
 nav ul {
   list-style: none;
